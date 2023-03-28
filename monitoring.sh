@@ -1,6 +1,9 @@
 #!bin/bash
 
 # COLORS
+PURPLE='\e[0;35m'
+ENDCOLOR='\e[0m'
+CYAN='\e[1;96m'
 
 # ARCH
 arch=$(uname -a)
@@ -45,15 +48,16 @@ mac=$(ip link | grep "link/ether" | awk '{print $2}')
 # SUDO
 cmnd=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
 
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "Architecture   :  " "$arch"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "CPU physical   :  " "$cpuf"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "vCPU           :  " "$cpuv"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "Memory Usage   :  " "$ram_use/$ram_total MB ($ram_percent%)"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "Disk Usage     :  " "$disk_use/$disk_total ($disk_percent%)"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "CPU load       :  " "$cpu_fin%"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "Last boot      :  " "$lb"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "LVM use        :  " "$lvmu"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "Connections TCP:  " "$tcpc ESTABLISHED"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "User log       :  " "$ulog"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "Network        :  " "IP $ip ($mac)"
-printf "\e[31;5m%-5s\e[0m\e[32m%-10s\e[0m\n" "Sudo           :  " "$cmnd cmd"/
+wall "$(
+echo -e "$PURPLE#Architecture   : $CYAN $arch$ENDCOLOR"
+echo -e "$PURPLE#CPU physical   : $CYAN $cpuf$ENDCOLOR"
+echo -e "$PURPLE#vCPU		: $CYAN $cpuv$ENDCOLOR"
+echo -e "$PURPLE#Memory Usage   : $CYAN $ram_use/$ram_total MB ($ram_percent%)$ENDCOLOR"
+echo -e "$PURPLE#Disk Usage     : $CYAN $disk_use/$disk_total ($disk_percent%)$ENDCOLOR"
+echo -e "$PURPLE#CPU load       : $CYAN $cpu_fin$ENDCOLOR"
+echo -e "$PURPLE#Last boot      : $CYAN $lb$ENDCOLOR"
+echo -e "$PURPLE#LVM use        : $CYAN $lvmu$ENDCOLOR"
+echo -e "$PURPLE#Connections TCP: $CYAN $tcpc ESTABLISHED$ENDCOLOR"
+echo -e "$PURPLE#User log       : $CYAN $ulog$ENDCOLOR"
+echo -e "$PURPLE#Network        : $CYAN IP $ip ($mac)$ENDCOLOR"
+echo -e "$PURPLE#Sudo           : $CYAN $cmnd cmd$ENDCOLOR")"
