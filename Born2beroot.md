@@ -37,28 +37,28 @@ To be honest, I chose it because the subject was not up to date.
 
 Debian and CentOS are both popular operating systems based on Linux, but they have several key differences.
 
-Origin and development: Debian is developed by a non-profit organization and is based on the principles of free software and open-source development. In contrast, CentOS is a community-driven project that is derived from the commercial Red Hat Enterprise Linux (RHEL) operating system.
+- **Origin and development:** Debian is developed by a non-profit organization and is based on the principles of free software and open-source development. In contrast, CentOS is a community-driven project that is derived from the commercial Red Hat Enterprise Linux (RHEL) operating system.
 
-Package Management: Debian uses the Advanced Package Tool (APT) as its default package manager, while CentOS uses Yellowdog Updater Modified (YUM) or its successor DNF (Dandified YUM). Both APT and YUM/DNF are powerful package managers that allow easy installation, removal, and upgrading of software packages.
+- **Package Management:** Debian uses the Advanced Package Tool (APT) as its default package manager, while CentOS uses Yellowdog Updater Modified (YUM) or its successor DNF (Dandified YUM). Both APT and YUM/DNF are powerful package managers that allow easy installation, removal, and upgrading of software packages.
 
-Release cycle and stability: Debian is known for its stability and long release cycles, with major releases occurring every two to three years. On the other hand, CentOS releases are typically more frequent, and major updates may introduce new features and changes.
+- **Release cycle and stability:** Debian is known for its stability and long release cycles, with major releases occurring every two to three years. On the other hand, CentOS releases are typically more frequent, and major updates may introduce new features and changes.
 
-Support: Debian has a large community of volunteers who provide support through online forums, wikis, and documentation. CentOS, on the other hand, has a strong corporate backing from Red Hat, which provides paid support options.
+- **Support:** Debian has a large community of volunteers who provide support through online forums, wikis, and documentation. CentOS, on the other hand, has a strong corporate backing from Red Hat, which provides paid support options.
 
-Default Desktop Environment: Debian offers a wide variety of desktop environments to choose from, whereas CentOS is primarily designed for server use and does not come with a default desktop environment.
+- **Default Desktop Environment:** Debian offers a wide variety of desktop environments to choose from, whereas CentOS is primarily designed for server use and does not come with a default desktop environment.
 
 ## What is the purpose of Virtual machines?
 The main benefits of VMs are:
 
-Isolation: VMs allow multiple operating systems to run independently from each other, isolating each OS and its applications from the others.
+- **Isolation:** VMs allow multiple operating systems to run independently from each other, isolating each OS and its applications from the others.
 
-Consolidation: By running multiple VMs on a single physical machine, you can consolidate your hardware resources and improve hardware utilization, reducing the cost of purchasing and maintaining multiple physical machines.
+- **Consolidation:** By running multiple VMs on a single physical machine, you can consolidate your hardware resources and improve hardware utilization, reducing the cost of purchasing and maintaining multiple physical machines.
 
-Testing and Development: VMs are commonly used in software testing and development environments, where multiple configurations and operating systems are required for testing software compatibility and functionality.
+- **Testing and Development:** VMs are commonly used in software testing and development environments, where multiple configurations and operating systems are required for testing software compatibility and functionality.
 
-Disaster Recovery: VMs can be used to create backups of entire systems, which can be restored quickly in case of hardware or software failures.
+- **Disaster Recovery:** VMs can be used to create backups of entire systems, which can be restored quickly in case of hardware or software failures.
 
-Security: VMs can be used to run potentially insecure applications in a sandboxed environment, preventing them from compromising the host operating system or other applications.
+- **Security:** VMs can be used to run potentially insecure applications in a sandboxed environment, preventing them from compromising the host operating system or other applications.
 
 ## What's the difference between apt, aptitude, apt-get?
 
@@ -144,8 +144,11 @@ ansoulim@ansoulim42:~$ sudo adduser test
 ansoulim@ansoulim42:~$ vim /etc/login.defs
 ```
 PASS_MAX_DAYS 99999 &rarr; PASS_MAX_DAYS 30
+
 PASS_MIN_DAYS 0 &rarr; PASS_MIN_DAYS 2
+
 <span style="color:red"> Note:</span>
+
 PASS_MAX_DAYS: The max days until the password is expired.
 
 PASS_MIN_DAYS: The min days until the password is expired.
@@ -209,14 +212,14 @@ ansoulim@ansoulim42:~$ hostnamectl
 ## Replace the hostname with the evaluator's login:
 ```console
 ansoulim@ansoulim42:~$ sudo vim /etc/hostname
-ansoulim@ansoulim42:~$ sudo nano /etc/hosts
+ansoulim@ansoulim42:~$ sudo vim /etc/hosts
 ansoulim@ansoulim42:~$ sudo reboot
 ```
 
 ## Restore to the original hostname:
 ```console
 ansoulim@ansoulim42:~$ sudo vim /etc/hostname
-ansoulim@ansoulim42:~$ sudo nano /etc/hosts
+ansoulim@ansoulim42:~$ sudo vim /etc/hosts
 ansoulim@ansoulim42:~$ sudo reboot
 ```
 
