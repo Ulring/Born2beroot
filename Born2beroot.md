@@ -3,7 +3,9 @@
 ## How does a virtual machine work?
 At a low level, a virtual machine (VM) is a software abstraction of a physical machine. It is created by a hypervisor, which is a layer of software that runs directly on the physical hardware and manages the virtualization of the resources.
 
-The hypervisor creates one or more virtual machines, each of which has its own virtual CPU, memory, storage, and network interfaces. The virtual CPU is emulated by the hypervisor, which intercepts and translates the instructions from the guest operating system to the underlying physical hardware. This allows multiple operating systems to run on the same physical machine, each in its own isolated virtual machine.
+The hypervisor creates one or more virtual machines, each of which has its own virtual CPU, memory, storage, and network interfaces.
+
+The virtual CPU is emulated by the hypervisor, which intercepts and translates the instructions from the guest operating system to the underlying physical hardware. This allows multiple operating systems to run on the same physical machine, each in its own isolated virtual machine.
 
 The virtual memory is also managed by the hypervisor, which maps the guest operating system's memory addresses to the physical memory addresses. This ensures that each virtual machine has its own isolated memory space and prevents one virtual machine from accessing another virtual machine's memory.
 
