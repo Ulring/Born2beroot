@@ -254,7 +254,7 @@ ansoulim@ansoulim42:~$ dpkg -s sudo | grep sudo
 
 ## Assign the new user to the "sudo" group:
 ```console
-ansoulim@ansoulim42:~$ sudo usermod -aG evaluating test
+ansoulim@ansoulim42:~$ sudo usermod -aG sudo test
 ```
 
 ## Check if the user belongs to the "sudo" group:
