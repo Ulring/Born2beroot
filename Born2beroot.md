@@ -278,7 +278,7 @@ ansoulim@ansoulim42:~$ sudo apt-get install package_name
 
 ## Show the implementation of the rules imposed by the subject:
 ```console
-ansoulim@ansoulim42:~$ vim/etc/sudoers.d/sudo_config
+ansoulim@ansoulim42:~$ vim /etc/sudoers.d/sudo_config
 ```
 - **Defaults passwd_tries=3:** This line sets the default value for the number of times a user can enter a wrong password before getting locked out. In this case, it's set to 3.
 
