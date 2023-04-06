@@ -284,7 +284,7 @@ ansoulim@ansoulim42:~$ vim /etc/sudoers.d/sudo_config
 
 - **Defaults badpass_message="Bad password.Try again":** This line sets a custom error message that will be displayed to the user if they enter an incorrect password.
 
-- **Defaults logfile="/var/log/sudo/sudo_config":** This line specifies the location and name of the log file where sudo will record its activities.
+- **Defaults logfile="/var/log/sudo/sudo_log":** This line specifies the location and name of the log file where sudo will record its activities.
 
 - **Defaults log_input, log_output:** This line tells sudo to log both the commands being executed (log_input) and the output of those commands (log_output).
 
